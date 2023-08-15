@@ -22,29 +22,46 @@ The defined network used all 246 regions included in the [Brainnetome Atlas](htt
 
 Additional notes: As nuissance regressors the six rigid-body transformtion parameters where used. The experiment was  split in two sessions which is also not reflected in the shown formula. The data where preprocessed using halfpipe and a first-level analysis was conducted using SPM12.
 
+### Use of tutorial
+
+The tutorial can be easily run, you just need to update the working directory in the scripts. The functions of gppi-network (found in library) should not need any chance. The inits.m script sets up all used parameters and gives an explanation of the needed arguments (output is already saved in parameters.mat). The main.m script load these parameters and runs the steps of the gppi-network packet. Additionally, XXX is jsut the code of how I created the images shown here.
+
+As a prerequisite you need SPM and some SPM-functions might rely on the Image Processing Toolbox. The packet and tutorial are programmed for Windows, but you can find an additional library for gppi-network and adapted tutorial-scripts in the folder linux&max that should run on these systems. You just need to replace the original content with these scripts.
+
 ### Psychophysiological interaction contrast for high- over low calorie food images 
 
-As the heatmap of a 246x246 matrix is not super readable I se 
-
-![roi_ev_50](https://github.com/gregory-gutmann/gppi-network/assets/36300365/e1434db2-3ffc-46df-9a64-cd60591615d4)
-
-![roi_ev](https://github.com/gregory-gutmann/gppi-network/assets/36300365/9eade133-0cbd-434e-8a37-575830ef5761)
-
-
-
-![hi-over-low](https://github.com/gregory-gutmann/gppi-network/assets/36300365/aa07588f-5c31-4939-b92d-c176825e5332)
-
-
+As a 246x247 heatmap might be a bit unfit for visual inspection I selected a set of seed and target regions containing the 20 most positive or negative contrasts. The seed regions includes among others regions from the prefrontal cortex, inferior temporal gyrus (ITG) and thalamus. The target set includes regions of the precentral gyrus, ITG, fusiform gyrus (FuG) and parahippocampal gyrus. Even though this reflects just one subject the set overlaps with the reported regions from Masterdon et al. (2016). Highly interesting might be the thalamic seed regions given the afferent connection of the thalamus to the neocortex and it's role in visual perception (USrey & Alitto, 2015). Furthermore, right parts of the ITG and left parts of the FuG seem to be prime target regions which makes sense as they are highly assosciated with visual processing e.g. object recognition (Lin et al., 2020; Weiner & Zilles, 2016).
 
 ![ppi-hi-over-low](https://github.com/gregory-gutmann/gppi-network/assets/36300365/74078547-44ba-4fb5-8fe0-a02da778536e)
 
 
+### Psychological or design contrast for high- over low calorie food images 
+
+The following image shows the contrast of β11>β12 meaning the differences in beta-weights between the regular high- and low-calorie condition – without the interaction with the seed time series. In contrast with the ppi-contrast the main difference seem to be between the target region with little variance within them. This makes sense as this contrast reflects a combination of design parameters. But similar to the ppi-contrast most values are positive which fits to the finding of Masterdon et al. (2016) that high-calorie food were associated with greater acitivity the low-calorie food. For a better comparison the same colour ratio is choosen.
+
+![hi-over-low](https://github.com/gregory-gutmann/gppi-network/assets/36300365/aa07588f-5c31-4939-b92d-c176825e5332)
+
+### Physiological contrast
+
+This contrast reflects β2 or the direct relationship between seed and target. In this case I just picked the first 50 regions of the atlas. As expected, the beta weights are way higher when seed and target region is the same. This is not the case for the ppi- or design contrast.
+
+![roi_ev_50](https://github.com/gregory-gutmann/gppi-network/assets/36300365/e1434db2-3ffc-46df-9a64-cd60591615d4)
+
+
+## Overview of the packet ggpi-network
+
+My packet is heavily based upon the gPPI-Toolbox by McLaren et al. (2013). Mainly, I created a framework around their gPPI-modelling for my intented goal. The following structure gives a simple overview of the included function,their purpose and in which order they are apllied. 
 
 
 
-For the tutorial the following model is applied
+### Contact information
+
+For questions and comments I can be reached at gregory.gutmann@fu-berlin.de.
 
 ### Literatur
 Fan, L., Li, H., Zhuo, J., Zhang, Y., Wang, J., Chen, L., ... & Jiang, T. (2016). The human brainnetome atlas: a new brain atlas based on connectional architecture. Cerebral cortex, 26(8), 3508-3526.
+Lin, Y. H., Young, I. M., Conner, A. K., Glenn, C. A., Chakraborty, A. R., Nix, C. E., ... & Sughrue, M. E. (2020). Anatomy and white matter connections of the inferior temporal gyrus. World Neurosurgery, 143, e656-e666.
 Masterson, T. D., Kirwan, C. B., Davidson, L. E., & LeCheminant, J. D. (2016). Neural reactivity to visual food stimuli is reduced in some areas of the brain during evening hours compared to morning hours: an fMRI study in women. Brain imaging and behavior, 10(1), 68-78.
 McLaren, D. G., Ries, M. L., Xu, G., & Johnson, S. C. (2012). A generalized form of context-dependent psychophysiological interactions (gPPI): a comparison to standard approaches. Neuroimage, 61(4), 1277-1286.
+Usrey, W. M., & Alitto, H. J. (2015). Visual functions of the thalamus. Annual review of vision science, 1, 351-371.
+Weiner, K. S., & Zilles, K. (2016). The anatomical and functional specialization of the fusiform gyrus. Neuropsychologia, 83, 48-62.
