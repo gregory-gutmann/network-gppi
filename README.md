@@ -5,7 +5,7 @@ gppi-network builds on the [gPPI Version 13.1](https://www.nitrc.org/projects/gp
 ## The idea behind gPPI
 Very simplified, gPPI models the time series (t) of a voxel based on a design regressors, the time series of a seed region (eigenvariate of the time series of the voxels included in this region), as well as the interaction between design regressors and seed region. Cofounding regressors like movement parameters can also be factored in. Or in short:
 
-  target(t) = β0 + β1 design(t) + β2 seed(t) + β3 design_seed(t) + nuissance regressors + e(t)         (see below for pratical example)
+  target(t) = β0 + β1 design(t) + β2 seed(t) + β3 design_seed(t) + nuissance regressors + e(t)         
 
 Of most interest are the values of the β3 estimates as they are an indicator for the strength of the relationship between seed- and target-region controlled for the sam external input (unlike the β2 estimates). β3 estimates are large when both regions have similar activity during task (e.g. when picture is shown) and unsimilar activity during control (e.g. when black screen is shown). Similar activity during control will decrease β3 estimate.
 
