@@ -53,7 +53,8 @@ This contrast reflects β2 or the direct relationship between seed and target. I
 
 My packet is heavily based upon the gPPI-Toolbox by McLaren et al. (2012). Mainly, I created a framework around their gPPI-modelling for my intented goal. The following structure gives a simple overview of the included function,their purpose and in which order they are apllied. 
 
-![gppi](https://github.com/gregory-gutmann/gppi-network/assets/36300365/861e6d65-e640-4e89-9306-0ca560499b8d)
+![gppi](https://github.com/gregory-gutmann/gppi-network/assets/36300365/1497434a-3340-4d70-a1df-a6c859864b25)
+
 
 
 ### Contact information
