@@ -24,10 +24,11 @@ Additional notes: As nuissance regressors the six rigid-body transformtion param
 
 ### Use of tutorial
 
-The tutorial can be easily run, you just need to update the working directory in the scripts. The functions of gppi-network (found in library) should not need any chance. The inits.m script sets up all used parameters and gives an explanation of the needed arguments (output is already saved in parameters.mat). The main.m script load these parameters and runs the steps of the gppi-network packet. Additionally, XXX is jsut the code of how I created the images shown here.
+The tutorial can be easily run, you just need to update the working directory in the main.m and visualization_gppi_mat.m. The functions of gppi-network (found in library) should not need any chance. inits.m sets up all used parameters and gives an explanation of the needed arguments and is included in the main.m script as a function. The main.m script load these parameters and runs the steps of the gppi-network packet. Additionally, visualization_gppi_mat.m is just the code of how I created the images shown here.
 
-As a prerequisite you need SPM and some SPM-functions might rely on the Image Processing Toolbox. The packet and tutorial are programmed for Windows, but you can find an additional library for gppi-network and adapted tutorial-scripts in the folder linux&max that should run on these systems. You just need to replace the original content with these scripts.
+The packet and tutorial are programmed for Windows, but you can find an additional library for gppi-network and adapted tutorial-scripts in the folder linux&max that should run on these systems. As a prerequisite you need SPM and some SPM-functions might rely on the Image Processing Toolbox. You just need to replace the lib-folder and use the included tutorial-scripts.
 
+  
 ### Psychophysiological interaction contrast for high- over low calorie food images 
 
 As a 246x247 heatmap might be a bit unfit for visual inspection I selected a set of seed and target regions containing the 20 most positive or negative contrasts. The seed regions includes among others regions from the prefrontal cortex, inferior temporal gyrus (ITG) and thalamus. The target set includes regions of the precentral gyrus, ITG, fusiform gyrus (FuG) and parahippocampal gyrus. Even though this reflects just one subject the set overlaps with the reported regions from Masterdon et al. (2016). Highly interesting might be the thalamic seed regions given the afferent connection of the thalamus to the neocortex and it's role in visual perception (USrey & Alitto, 2015). Furthermore, right parts of the ITG and left parts of the FuG seem to be prime target regions which makes sense as they are highly assosciated with visual processing e.g. object recognition (Lin et al., 2020; Weiner & Zilles, 2016).
@@ -59,9 +60,9 @@ My packet is heavily based upon the gPPI-Toolbox by McLaren et al. (2013). Mainl
 For questions and comments I can be reached at gregory.gutmann@fu-berlin.de.
 
 ### Literatur
-Fan, L., Li, H., Zhuo, J., Zhang, Y., Wang, J., Chen, L., ... & Jiang, T. (2016). The human brainnetome atlas: a new brain atlas based on connectional architecture. Cerebral cortex, 26(8), 3508-3526.
-Lin, Y. H., Young, I. M., Conner, A. K., Glenn, C. A., Chakraborty, A. R., Nix, C. E., ... & Sughrue, M. E. (2020). Anatomy and white matter connections of the inferior temporal gyrus. World Neurosurgery, 143, e656-e666.
-Masterson, T. D., Kirwan, C. B., Davidson, L. E., & LeCheminant, J. D. (2016). Neural reactivity to visual food stimuli is reduced in some areas of the brain during evening hours compared to morning hours: an fMRI study in women. Brain imaging and behavior, 10(1), 68-78.
-McLaren, D. G., Ries, M. L., Xu, G., & Johnson, S. C. (2012). A generalized form of context-dependent psychophysiological interactions (gPPI): a comparison to standard approaches. Neuroimage, 61(4), 1277-1286.
-Usrey, W. M., & Alitto, H. J. (2015). Visual functions of the thalamus. Annual review of vision science, 1, 351-371.
-Weiner, K. S., & Zilles, K. (2016). The anatomical and functional specialization of the fusiform gyrus. Neuropsychologia, 83, 48-62.
+- Fan, L., Li, H., Zhuo, J., Zhang, Y., Wang, J., Chen, L., ... & Jiang, T. (2016). The human brainnetome atlas: a new brain atlas based on connectional architecture. Cerebral cortex, 26(8), 3508-3526.
+- Lin, Y. H., Young, I. M., Conner, A. K., Glenn, C. A., Chakraborty, A. R., Nix, C. E., ... & Sughrue, M. E. (2020). Anatomy and white matter connections of the inferior temporal gyrus. World Neurosurgery, 143, e656-e666.
+- Masterson, T. D., Kirwan, C. B., Davidson, L. E., & LeCheminant, J. D. (2016). Neural reactivity to visual food stimuli is reduced in some areas of the brain during evening hours compared to morning hours: an fMRI study in women. Brain imaging and behavior, 10(1), 68-78.
+- McLaren, D. G., Ries, M. L., Xu, G., & Johnson, S. C. (2012). A generalized form of context-dependent psychophysiological interactions (gPPI): a comparison to standard approaches. Neuroimage, 61(4), 1277-1286.
+- Usrey, W. M., & Alitto, H. J. (2015). Visual functions of the thalamus. Annual review of vision science, 1, 351-371.
+- Weiner, K. S., & Zilles, K. (2016). The anatomical and functional specialization of the fusiform gyrus. Neuropsychologia, 83, 48-62.
