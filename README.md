@@ -20,7 +20,7 @@ target(t) = β0 + β11 high(t) + β12 low(t) + β13 cont(t) + β2 seed(t) + β31
 
 The defined network used all 246 regions included in the [Brainnetome Atlas](https://atlas.brainnetome.org) developed by Fan et al. (2016). Individual ROI-masks with a sphere of 8 mm radius where created. There were centered around peaks based on standard first-level activity contrasts, in this case high>low calorie food images. The different gPPI parameters were then created for each seed region and in a following step applied to each target region to estimate the beta weights. Similar to activity first-level anaylsis the beta weights can be combined to look at contrasts of interest. In the following I will look mainly at the β31 > β32 contrast or in other words the ppi-contrast for high>low calorie food. 
 
-Additional notes: As nuissance regressors the six rigid-body transformtion parameters where used. The experiment was  split in two sessions which is also not reflected in the shown formula. The data where preprocessed using halfpipe and a first-level analysis was conducted using SPM12.
+Additional notes: As nuissance regressors the six rigid-body transformtion parameters where used. The experiment was  split in two sessions which is also not reflected in the shown formula. The data where preprocessed using halfpipe and a first-level analysis was conducted using SPM12. The included region masks were also realigned to fit the dimension and orientation of the bold data.
 
 ### Use of tutorial
 
