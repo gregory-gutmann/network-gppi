@@ -29,16 +29,16 @@ The tutorial can be easily run, you just need to update the working directory in
 The packet and tutorial are programmed for Windows, but you can find an additional library for gppi-network and adapted tutorial-scripts in the folder linux&max that should run on these systems. You just need to replace the lib-folder and use the included tutorial-scripts. As a prerequisite you need SPM and some SPM-functions might rely on the Image Processing Toolbox. 
 
   
-### Psychophysiological interaction contrast for high- over-low calorie food images 
+### Psychophysiological interaction contrast for high- over low-calorie food images 
 
-As a 246x247 heatmap might be a bit unfit for visual inspection I selected a set of seed and target regions containing the 20 most positive or negative contrasts. The seed regions includes among others regions from the prefrontal cortex, inferior temporal gyrus (ITG) and thalamus. The target set includes regions of the precentral gyrus, ITG, fusiform gyrus (FuG) and parahippocampal gyrus. Even though this reflects just one subject the set overlaps with the reported regions from Masterdon et al. (2016). Highly interesting might be the thalamic seed regions given the afferent connection of the thalamus to the neocortex and it's role in visual perception (USrey & Alitto, 2015). Furthermore, right parts of the ITG and left parts of the FuG seem to be prime target regions which makes sense as they are highly assosciated with visual processing e.g. object recognition (Lin et al., 2020; Weiner & Zilles, 2016).
+As a 246x247 heatmap might be a bit unfit for visual inspection I selected a set of seed and target regions containing the 20 most positive or negative contrasts. The seed regions includes a.o. ROIs from the prefrontal cortex, inferior temporal gyrus (ITG) and thalamus. The target set includes regions of the precentral gyrus, ITG, fusiform gyrus (FuG) and parahippocampal gyrus. Even though this reflects just one subject the set overlaps with the reported regions from Masterdon et al. (2016). Highly interesting might be the thalamic seed regions given the afferent connection of the thalamus to the neocortex and it's role in visual perception (USrey & Alitto, 2015). Furthermore, right parts of the ITG and left parts of the FuG seem to be prime target regions which makes sense as they are highly assosciated with visual processing e.g. object recognition (Lin et al., 2020; Weiner & Zilles, 2016).
 
 ![ppi-hi-over-low](https://github.com/gregory-gutmann/gppi-network/assets/36300365/74078547-44ba-4fb5-8fe0-a02da778536e)
 
 
-### Psychological or design contrast for high- over low calorie food images 
+### Psychological or design contrast for high- over low-calorie food images 
 
-The following image shows the contrast of β11>β12 meaning the differences in beta-weights between the regular high- and low-calorie condition – without the interaction with the seed time series. In contrast with the ppi-contrast the main difference seem to be between the target region with little variance within them. This makes sense as this contrast reflects a combination of design parameters. But similar to the ppi-contrast most values are positive which fits to the finding of Masterdon et al. (2016) that high-calorie food were associated with greater acitivity the low-calorie food. For a better comparison the same colour ratio is choosen.
+The following image shows the contrast of β11>β12 meaning the differences in beta-weights between the regular high- and low-calorie condition – without the interaction with the seed time series. Most of the variance seem to be explained by the different target regions with little influence of the seed regions which makes sense as this contrast reflects a combination of design parameters. But similar to the ppi-contrast most values are positive which fits to the finding of Masterdon et al. (2016) that high-calorie food were associated with greater acitivity then low-calorie food. For a better comparison the same colour ratio was choosen.
 
 ![hi-over-low](https://github.com/gregory-gutmann/gppi-network/assets/36300365/aa07588f-5c31-4939-b92d-c176825e5332)
 
