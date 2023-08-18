@@ -18,7 +18,7 @@ In this tutorial I used fMRI data from one subject provided by Masterdon et al. 
 
 target(t) = β0 + β11 high(t) + β12 low(t) + β13 cont(t) + β2 seed(t) + β31 high_seed(t) + β32 low_seed(t) + β33 cont_seed(t) + e(t)
 
-The defined network used all 246 regions included in the [Brainnetome Atlas](https://atlas.brainnetome.org) developed by Fan et al. (2016). Individual ROI-masks with a sphere of 8 mm radius where created. There were centered around peaks based on standard first-level activity contrasts, in this case high>low calorie food images. The different gPPI parameters were then created for each seed region and in a following step applied to each target region to estimate the beta weights. Similar to first-level activity anaylsis the beta weights can be combined to look at contrasts of interest. In the following I will look mainly at the β31 > β32 contrast or in other words the ppi-contrast for high>low calorie food. 
+The defined network used all 246 regions included in the [Brainnetome Atlas](https://atlas.brainnetome.org) developed by Fan et al. (2016). Individual ROI-masks with a sphere of 8 mm radius were created. There were centered around peaks based on standard first-level activity contrasts, in this case high>low calorie food images. The different gPPI parameters were then created for each seed region and in a following step applied to each target region to estimate the beta weights. Similar to first-level activity anaylsis the beta weights can be combined to look at contrasts of interest. In the following I will look mainly at the β31 > β32 contrast or in other words the ppi-contrast for high>low calorie food. 
 
 Additional notes: As nuissance regressors the six rigid-body transformtion parameters where used. The experiment was  split in two sessions which is also not reflected in the shown formula. The data where preprocessed using halfpipe. The included region masks were also realigned to fit the dimension and orientation of the bold data.
 
@@ -38,13 +38,13 @@ As a 246x247 heatmap might be a bit unfit for visual inspection I selected a set
 
 ### Psychological or design contrast for high- over low-calorie food images 
 
-The following image shows the contrast of β11>β12 meaning the differences in beta-weights between the regular high- and low-calorie condition – without the interaction with the seed time series. Most of the variance seem to be explained by the different target regions with little influence of the seed regions which makes sense as this contrast reflects a combination of design parameters. But similar to the ppi-contrast most values are positive which fits to the finding of Masterdon et al. (2016) that high-calorie food were associated with greater acitivity then low-calorie food. For a better comparison the same colour ratio was choosen.
+The following image shows the contrast of β11>β12 meaning the differences in beta-weights between the regular high- and low-calorie food condition. Most of the variance seem to be explained by the different target regions with little influence of the seed regions which makes sense as this contrast reflects a combination of design parameters – without the interaction with the seed time series. Similar to the ppi-contrast most values are positive which fits to the finding of Masterdon et al. (2016) that high-calorie food images were associated with greater acitivity then low-calorie food images. For a better comparison the same colour ratio was choosen.
 
 ![hi-over-low](https://github.com/gregory-gutmann/gppi-network/assets/36300365/aa07588f-5c31-4939-b92d-c176825e5332)
 
 ### Physiological contrast
 
-This contrast reflects β2 or the direct relationship between seed and target. In this case I just picked the first 50 regions of the atlas. As expected, the beta weights are way higher when seed and target region is the same. This is not the case for the ppi- or design contrast.
+This contrast reflects β2 or the direct relationship between seed and target. In this case I just picked the first 50 regions of the atlas. As expected, the beta weights are way higher when seed and target region match. This is not the case for the ppi- or design contrast.
 
 ![roi_ev_50](https://github.com/gregory-gutmann/gppi-network/assets/36300365/e1434db2-3ffc-46df-9a64-cd60591615d4)
 
