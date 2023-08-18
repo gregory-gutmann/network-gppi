@@ -33,29 +33,25 @@ The packet and tutorial are programmed for Windows, but you can find an addition
 
 As a 246x247 heatmap might be a bit unfit for visual inspection I selected a set of seed and target regions containing the 20 most positive or negative contrasts. The seed regions includes a.o. ROIs from the prefrontal cortex, inferior temporal gyrus (ITG) and thalamus. The target set includes regions of the precentral gyrus, ITG, fusiform gyrus (FuG) and parahippocampal gyrus. Even though this reflects just one subject the set overlaps with the reported regions from Masterdon et al. (2016). Highly interesting might be the thalamic seed regions given the afferent connection of the thalamus to the neocortex and it's role in visual perception (USrey & Alitto, 2015). Furthermore, right parts of the ITG and left parts of the FuG seem to be prime target regions which makes sense as they are highly assosciated with visual processing e.g. object recognition (Lin et al., 2020; Weiner & Zilles, 2016).
 
-![ppi-hi-over-low](https://github.com/gregory-gutmann/gppi-network/assets/36300365/74078547-44ba-4fb5-8fe0-a02da778536e)
-
+![ppi-hi-over-low](https://github.com/gregory-gutmann/gppi-network/assets/36300365/ef0219ea-174b-4f6e-90bc-d084cbb3d88f)
 
 ### Psychological or design contrast for high- over low-calorie food images 
 
 The following image shows the contrast of β11>β12 meaning the differences in beta-weights between the regular high- and low-calorie food condition. Most of the variance seem to be explained by the different target regions with little influence of the seed regions which makes sense as this contrast reflects a combination of design parameters – without the interaction with the seed time series. Similar to the ppi-contrast most values are positive which fits to the finding of Masterdon et al. (2016) that high-calorie food images were associated with greater acitivity then low-calorie food images. For a better comparison the same colour ratio was choosen.
 
-![hi-over-low](https://github.com/gregory-gutmann/gppi-network/assets/36300365/aa07588f-5c31-4939-b92d-c176825e5332)
+![hi-over-low](https://github.com/gregory-gutmann/gppi-network/assets/36300365/ed738e80-a8c1-4ac4-b4f9-0e37332fd0b2)
 
 ### Physiological contrast
 
 This contrast reflects β2 or the direct relationship between seed and target. In this case I just picked the first 50 regions of the atlas. As expected, the beta weights are way higher when seed and target region match. This is not the case for the ppi- or design contrast.
 
-![roi_ev_50](https://github.com/gregory-gutmann/gppi-network/assets/36300365/e1434db2-3ffc-46df-9a64-cd60591615d4)
-
+![roi_ev_50](https://github.com/gregory-gutmann/gppi-network/assets/36300365/7e42cfb5-307b-4646-bd60-4ad0b7c1ef4a)
 
 ## Overview of the packet ggpi-network
 
 My packet is heavily based upon the gPPI-Toolbox by McLaren et al. (2012). Mainly, I created a framework around their gPPI-modelling for my intented goal. The following structure gives a simple overview of the included function,their purpose and in which order they are apllied. 
 
-![gppi](https://github.com/gregory-gutmann/gppi-network/assets/36300365/755c72c7-6059-469f-860d-64220c2c2ef0)
-
-
+![gppi-structure](https://github.com/gregory-gutmann/gppi-network/assets/36300365/7e13b38f-a22f-4781-abdd-4526988fa011)
 
 
 ### Contact information
