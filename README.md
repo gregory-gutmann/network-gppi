@@ -24,7 +24,7 @@ Additional notes: As nuissance regressors the six rigid-body transformtion param
 
 ### Use of tutorial
 
-The tutorial can be easily run, you just need to update the working directory in the main.m and visualization_gppi_mat.m. Because of their size I also had to upload the preprocessed data using LSF so you propably have to download them raw and put them in the correct folder under /tutorial/data/preprocessed. The functions of gppi-network (found in library) don't need any chance. inits.m sets up all used parameters and gives an explanation of the needed arguments and is included in the main.m script as a function. It also unpacks the preprocessed data and runs a first-level activity-analysis. The main.m script loads these parameters and runs the steps of the gppi-network packet. Additionally, visualization_gppi_mat.m is just the code of how I created the images shown here.
+The tutorial can be easily run, you just need to update the working directory in the main.m and visualization_gppi_mat.m. The functions of gppi-network (found in library) don't need any chance. inits.m sets up all used parameters and gives an explanation of the needed arguments and is included in the main.m script as a function. It also unpacks the preprocessed data and runs a first-level activity-analysis. The main.m script loads these parameters and runs the steps of the gppi-network packet. Additionally, visualization_gppi_mat.m is just the code of how I created the images shown here.
 
 As a prerequisite you need SPM and some SPM-functions might rely on the Image Processing Toolbox. 
 
