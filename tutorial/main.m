@@ -39,6 +39,7 @@ script.
 %}    
 
 %% Working directory (needs to be updated)
+% Must end with a file-seperator (for- or backslash)
 wkdir           =  '/Users/gregory/Arbeit/gppi-network/';
 
 
