@@ -39,9 +39,11 @@ script.
 %}    
 
 %% Working directory (needs to be updated)
-% Must end with a file-seperator (for- or backslash)
 wkdir           =  '/Users/gregory/Arbeit/gppi-network/';
-
+% Adds file separator if necessary
+if wkdir(end) ~= filesep
+    wkdir           = [wkdir,filesep];
+end
 
 %% Add paths to library and inits.m
 addpath([wkdir, 'lib'])
