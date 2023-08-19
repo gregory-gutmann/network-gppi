@@ -3,6 +3,10 @@
 
 %% Needs to be changed to gppi-network folder
 wkdir           = '/Users/gregory/Arbeit/gppi-network/'
+% Adds file separator if necessary
+if wkdir(end) ~= filesep
+    wkdir           = [wkdir,filesep];
+end
 
 %% Brainnettome (all)
 % Load in mats
