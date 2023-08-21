@@ -80,7 +80,7 @@ load([wkdir,'tutorial',filesep,'parameters.mat'])
 % Adapts general roi-masks to individual mask by drawing a volumne around defined peaks
 roi_peak_masks(fstFolder,ntwFolder,roiFolder,roiList,sphere,sphereInfo,contPeak,directionList);
 
-% Extract eigenvariates
+% Extract eigenvariates (might take a little bit)
 %   creates seed-eigenvariate: whitened, filtered, cofounds removed 
 %   creates target-eigenvariate: whitened, frequenz-filtered
 eigenvariate(fstFolder,ntwFolder,contAdj,roiList,roiSubFolder);
