@@ -2,7 +2,8 @@
 % Gregory Gutmann (14.08.2023)
 
 %% Needs to be changed to gppi-network folder
-wkdir           = '/Users/gregory/Arbeit/gppi-network/'
+% Change wd to folder that contains lib- and tutorial-folder
+wkdir           =  '/Users/gregory/Arbeit/gppi-network-main/';
 % Adds file separator if necessary
 if wkdir(end) ~= filesep
     wkdir           = [wkdir,filesep];
