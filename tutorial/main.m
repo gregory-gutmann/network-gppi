@@ -39,7 +39,8 @@ script.
 %}    
 
 %% Working directory (needs to be updated)
-wkdir           =  '/Users/gregory/Arbeit/gppi-network/';
+% Change wd to folder that contains lib- and tutorial-folder
+wkdir           =  '/Users/gregory/Arbeit/gppi-network-main/';
 % Adds file separator if necessary
 if wkdir(end) ~= filesep
     wkdir           = [wkdir,filesep];
