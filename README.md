@@ -37,7 +37,7 @@ As a 246x247 heatmap might be a bit unfit for visual inspection I selected a set
 
 ### Psychological or design contrast for high- over low-calorie food images 
 
-The following image shows the contrast of β11>β12 meaning the differences in beta-weights between the regular high- and low-calorie food condition. Most of the variance seem to be explained by the different target regions with little influence of the seed regions. This makes sense as the contrast reflects a combination of design parameters – without the interaction with the seed time series. Similar to the ppi-contrast most values are positive which is in line with the finding of Masterdon et al. (2016) that high-calorie food images were associated with greater activity than low-calorie food images. For a better comparison the same colour ratio was chosen.
+The following image shows the contrast of β11>β12 meaning the differences in beta-weights between the regular high- and low-calorie food condition. Most of the variance seem to be explained by the different target regions with little influence of the seed regions. This makes sense as this contrast in comparison to ppi-contrast only reflects a combination of design parameters (β11 and β12). The ppi-contrast on the other hand reflects the interaction between design parameters and the seed time series (β31 and β32). However, for both contrasts most values are positive which is in line with the finding of Masterdon et al. (2016) that high-calorie food images were associated with greater activity than low-calorie food images. For a better comparison the same colour ratio was chosen.
 
 ![hi-over-low](https://github.com/gregory-gutmann/gppi-network/assets/36300365/ed738e80-a8c1-4ac4-b4f9-0e37332fd0b2)
 
