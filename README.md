@@ -7,7 +7,7 @@ Very simplified, gPPI models the time series (t) of a target voxel based on desi
 
   target(t) = β0 + β1 design(t) + β2 seed(t) + β3 design_seed(t) + nuissance regressors + e(t)         
 
-Of most interest are the values of the β3 estimates as they are an indicator for the strength of the relationship between seed and target regions controlled for the same external input (unlike the β2 estimates). β3 estimates are large when both regions have similar activity during a task (e.g. when picture is shown) and unsimilar activity during control (e.g. when black screen is shown). Similar activity during control will decrease β3 estimates towards zero/negative values.
+Of most interest are the values of the β3 estimates as they are an indicator for the strength of the relationship between seed and target regions controlled for the same external input (unlike the β2 estimates). 
 
 For a more detailed explanation see McLaren et al. (2012).
 
