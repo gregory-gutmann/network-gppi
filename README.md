@@ -39,13 +39,15 @@ As a 246x247 heatmap might be a bit unfit for visual inspection I selected a set
 
 The following image shows the contrast of β11>β12 meaning the differences in beta-weights between the regular high- and low-calorie food condition. Most of the variance seem to be explained by the different target regions with little influence of the seed regions. This makes sense as this contrast in comparison to ppi-contrast only reflects a combination of design parameters (β11 and β12). The ppi-contrast on the other hand reflects the interaction between design parameters and the seed time series (β31 and β32). However, for both contrasts most values are positive which is in line with the finding of Masterdon et al. (2016) that high-calorie food images were associated with greater activity than low-calorie food images. For a better comparison the same colour ratio was chosen.
 
-![hi-over-low](https://github.com/gregory-gutmann/gppi-network/assets/36300365/ed738e80-a8c1-4ac4-b4f9-0e37332fd0b2)
+![hi_over_low](https://github.com/gregory-gutmann/gppi-network/assets/36300365/59bb1a50-d79b-41ee-a2a9-1e044a2e7316)
+
 
 ### Physiological contrast
 
-This contrast reflects β2 or the direct relationship between seed and target. In this case I selected the first 50 regions of the atlas. As expected, the beta weights are much higher when seed and target region match. This is not the case for the ppi- or design contrast.
+This contrast reflects β2 or the direct relationship between seed and target. In this case I selected the first 50 regions of the atlas. As expected, the beta weights are much higher when seed and target region are the same. This is not the case for the ppi- or design contrast.
 
-![roi_ev_50](https://github.com/gregory-gutmann/gppi-network/assets/36300365/7e42cfb5-307b-4646-bd60-4ad0b7c1ef4a)
+![roi_ev](https://github.com/gregory-gutmann/gppi-network/assets/36300365/a097ad8d-4450-4950-b796-869798f016c4)
+
 
 ## Overview of the packet ggpi-network
 
