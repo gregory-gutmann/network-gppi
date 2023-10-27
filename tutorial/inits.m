@@ -30,7 +30,7 @@ function inits(wkdir)
 %% Set up subject-unspecific parameters
 % Folder with region mask & list of regions. The region maps are already
 % realigned to fit the dimension and orientation of the task.
-roiFolder      = [wkdir,'tutorial',filesep,'roi-masks',filesep];
+roiFolder      = [wkdir,'tutorial',filesep,'roi_masks',filesep];
 roiList        = dir([roiFolder,'*.nii']);
 roiList        = {roiList.name};
 
