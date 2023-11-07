@@ -33,21 +33,23 @@ As a prerequisite you need SPM and some SPM-functions might rely on the Image Pr
 
 As a 246x247 heatmap might be a bit unfit for visual inspection, I selected a set of seed and target regions containing the 20 most positive or negative contrasts. The seed regions include a.o. ROIs from the prefrontal, temporal and parietal cortex. The target set includes a.o. regions of the occipital cortex, especially cuneus. Even though this reflects just one subject the set overlaps with the reported regions from Masterdon et al. (2016). 
 
-![ppi_hi_over_low](https://github.com/gregory-gutmann/gppi-network/assets/36300365/af8a1bb4-b11a-44df-ab79-203bfa45f59b)
+![ppi_hi_over_low](https://github.com/gregory-gutmann/gppi-network/assets/36300365/235e2399-813f-4684-ae7e-b87e5931a8b4)
+
 
 
 ### Psychological or design contrast for high- over low-calorie food images 
 
 The following image shows the contrast of β11>β12 meaning the differences in beta-weights between the regular high- and low-calorie food condition. Most of the variance seem to be explained by the different target regions with less influence of the seed regions. This makes sense as this contrast in comparison to ppi-contrast only reflects a combination of design parameters (β11 and β12). The ppi-contrast on the other hand reflects the interaction between design parameters and the seed time series (β31 and β32). However, for both contrasts most values are positive which is in line with the finding of Masterdon et al. (2016) that high-calorie food images were associated with greater activity than low-calorie food images. For a better comparison the same colour ratio was chosen.
 
-![hi_over_low](https://github.com/gregory-gutmann/gppi-network/assets/36300365/59bb1a50-d79b-41ee-a2a9-1e044a2e7316)
+![hi_over_low](https://github.com/gregory-gutmann/gppi-network/assets/36300365/499559be-a135-49d5-8fd1-a8c5e0c00f37)
 
 
 ### Physiological contrast
 
 This contrast reflects β2 or the direct relationship between seed and target. In this case I selected the first 50 regions of the atlas. As expected, the beta weights are much higher when seed and target region are the same. This is not the case for the ppi- or design contrast.
 
-![roi_ev](https://github.com/gregory-gutmann/gppi-network/assets/36300365/a097ad8d-4450-4950-b796-869798f016c4)
+![roi_ev](https://github.com/gregory-gutmann/gppi-network/assets/36300365/7d5fbaf5-67ea-45f4-a329-91dbe4280266)
+
 
 
 ## Overview of the packet ggpi-network
