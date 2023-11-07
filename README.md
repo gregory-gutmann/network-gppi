@@ -39,7 +39,7 @@ As a 246x247 heatmap might be a bit unfit for visual inspection, I selected a se
 
 ### Psychological or design contrast for high- over low-calorie food images 
 
-The following image shows the contrast of β11>β12 meaning the differences in beta-weights between the regular high- and low-calorie food condition. Most of the variance seem to be explained by the different target regions with less influence of the seed regions. This makes sense as this contrast in comparison to ppi-contrast only reflects a combination of design parameters (β11 and β12). The ppi-contrast on the other hand reflects the interaction between design parameters and the seed time series (β31 and β32). However, for both contrasts most values are positive which is in line with the finding of Masterdon et al. (2016) that high-calorie food images were associated with greater activity than low-calorie food images. For a better comparison the same colour ratio was chosen.
+The following image shows the contrast of β11>β12 meaning the differences in beta-weights between the regular high- and low-calorie food condition. Most of the variance seem to be explained by the different target regions with less influence of the seed regions. This makes sense as this contrast in comparison to ppi-contrast only reflects a combination of design parameters (β11 and β12). The ppi-contrast on the other hand reflects the interaction between design parameters and the seed time series (β31 and β32). Most values are positive which is in line with the finding of Masterdon et al. (2016) that high-calorie food images were associated with greater activity than low-calorie food images. For a better comparison the same colour ratio was choosen that was used for the PPI-contrast.
 
 ![hi_over_low](https://github.com/gregory-gutmann/gppi-network/assets/36300365/499559be-a135-49d5-8fd1-a8c5e0c00f37)
 
@@ -48,7 +48,8 @@ The following image shows the contrast of β11>β12 meaning the differences in b
 
 This contrast reflects β2 or the direct relationship between seed and target. In this case I selected the first 50 regions of the atlas. As expected, the beta weights are much higher when seed and target region are the same. This is not the case for the ppi- or design contrast.
 
-![roi_ev](https://github.com/gregory-gutmann/gppi-network/assets/36300365/7d5fbaf5-67ea-45f4-a329-91dbe4280266)
+![roi_ev](https://github.com/gregory-gutmann/gppi-network/assets/36300365/7e019c66-44ff-485f-8c91-a0a664795c44)
+
 
 
 
