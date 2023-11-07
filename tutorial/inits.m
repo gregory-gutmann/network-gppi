@@ -95,6 +95,7 @@ evGLM.prepro(1)= {[wkdir,'tutorial',filesep,'data',filesep,'preprocessed',filese
 evGLM.prepro(2)= {[wkdir,'tutorial',filesep,'data',filesep,'preprocessed',filesep,sub,'_preproc2.nii']};
 evGLM.preprogz(1)= {[wkdir,'tutorial',filesep,'data',filesep,'preprocessed',filesep,sub,'_preproc1.nii.gz']};
 evGLM.preprogz(2)= {[wkdir,'tutorial',filesep,'data',filesep,'preprocessed',filesep,sub,'_preproc2.nii.gz']};
+evGLM.hrf        = 180;
 
 %% Decompress nii.gz files
 matlabbatch{1}.cfg_basicio.file_dir.file_ops.cfg_gunzip_files.files = evGLM.preprogz(1);
@@ -117,11 +118,11 @@ matlabbatch{1}.spm.stats.fmri_spec.timing.fmri_t0 = 1;
 matlabbatch{1}.spm.stats.fmri_spec.sess(1).scans = evGLM.prepro(1);
 matlabbatch{1}.spm.stats.fmri_spec.sess(1).multi = evGLM.design(1);
 matlabbatch{1}.spm.stats.fmri_spec.sess(1).multi_reg = evGLM.cofounds(1);
-matlabbatch{1}.spm.stats.fmri_spec.sess(1).hpf = 128;
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).hpf = evGLM.hrf;
 matlabbatch{1}.spm.stats.fmri_spec.sess(2).scans = evGLM.prepro(2);
 matlabbatch{1}.spm.stats.fmri_spec.sess(2).multi = evGLM.design(2);
 matlabbatch{1}.spm.stats.fmri_spec.sess(2).multi_reg = evGLM.cofounds(2);
-matlabbatch{1}.spm.stats.fmri_spec.sess(2).hpf = 128;
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).hpf = evGLM.hrf;
 matlabbatch{1}.spm.stats.fmri_spec.fact = struct('name', {}, 'levels', {});
 matlabbatch{1}.spm.stats.fmri_spec.bases.hrf.derivs = [0 0];
 matlabbatch{1}.spm.stats.fmri_spec.volt = 1;
