@@ -31,7 +31,7 @@ As a prerequisite you need SPM and some SPM-functions might rely on the Image Pr
   
 ### Psychophysiological interaction contrast for high- over low-calorie food images (ppi-contrast)
 
-As a 246x247 heatmap might be a bit unfit for visual inspection, I selected a set of seed and target regions containing the 20 most positive or negative contrasts. The seed regions include a.o. ROIs from the prefrontal, temporal and parietal cortex. The target set includes a.o. regions of the occipital cortex, especially cuneus. Even though this reflects just one subject the set overlaps with the reported regions from Masterdon et al. (2016). 
+As a 246x247 heatmap might be a bit unfit for visual inspection, I selected a set of seed and target regions containing the 20 most positive or negative contrasts. The seed regions include a.o. ROIs from the superior and inferior frontal gyrus, superior and inferior temporal gyrus and multiple regions from the amygdala. The target set includes a.o. multiple regions of the occipital cortex and cuneus. Even though this reflects just one subject the set overlaps with the reported regions from Masterdon et al. (2016). 
 
 ![ppi_hi_over_low](https://github.com/gregory-gutmann/gppi-network/assets/36300365/235e2399-813f-4684-ae7e-b87e5931a8b4)
 
