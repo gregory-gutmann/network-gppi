@@ -24,13 +24,13 @@ for c=1:length(SPM.Sess(sess).U)
     for i=1:length(ons)
         
         % Onset of singular block
-        on          = ons(i)/RT;
+        on          = round(ons(i)/RT);
     
         % Singular duration (in case duration is differently defined)
         if length(durs) == length(ons)
-            dur         = durs(i)/RT;
+            dur         = round(durs(i)/RT);
         else
-            dur         = durs(i)/RT;
+            dur         = round(durs(i)/RT);
         end
     
         % Add together design vector
