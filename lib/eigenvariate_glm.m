@@ -20,7 +20,7 @@ for sess=1:evGLM.sess
     matlabbatch{1}.spm.stats.fmri_spec.sess(sess).scans = evGLM.prepro(sess);
     matlabbatch{1}.spm.stats.fmri_spec.sess(sess).multi = evGLM.design(sess);
     matlabbatch{1}.spm.stats.fmri_spec.sess(sess).multi_reg = evGLM.cofounds(sess);
-    matlabbatch{1}.spm.stats.fmri_spec.sess(sess).hpf = evGLM.hrf;
+    matlabbatch{1}.spm.stats.fmri_spec.sess(sess).hpf = evGLM.hpf;
 end 
 matlabbatch{1}.spm.stats.fmri_spec.fact = struct('name', {}, 'levels', {});
 matlabbatch{1}.spm.stats.fmri_spec.bases.hrf.derivs = [0 0];
