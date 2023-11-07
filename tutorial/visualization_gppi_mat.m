@@ -3,7 +3,7 @@
 
 %% Needs to be changed to gppi-network folder
 % Change wd to folder that contains lib- and tutorial-folder
-wkdir           =  '/Users/gregory/Arbeit/gppi-network-main/';
+wkdir           =  'C:\Users\grego\Desktop\gppi-network-main';
 % Adds file separator if necessary
 if wkdir(end) ~= filesep
     wkdir           = [wkdir,filesep];
@@ -15,6 +15,11 @@ mats            = load([wkdir, 'tutorial',filesep,'gppi-matrizes.mat'])
 
 % Choose matrix for selecting wanted rows and columns
 mat             = mats.ppi_hi_over_low;
+
+% Load in roi-names
+load([wkdir, 'tutorial',filesep,'templates',filesep,'atlas.mat'])
+roinames        = {atlas.Name};
+roinames        = strrep(roinames,'_','-')
 
 %% Create filter index
 % Subset for most significant regions based on row- and colsums (based on PPI.mat)
@@ -51,15 +56,11 @@ gppi_r       = [red_r' green_r' blue_r'];
 gppi         = [gppi_r;gppi_b];
 
 
-%% Plot map
+%% Plot ppi_hi_over_low
 % Set-up
 mat             = mats.ppi_hi_over_low; % change for different maps
 rows            = unique(sigRows);
 cols            = unique(sigCols);
-
-% Load in roi-names
-load([wkdir, 'tutorial',filesep,'templates',filesep,'atlas.mat'])
-roinames        = {atlas.Name};
 
 % Plot all (change mat with filter)
 heat            = heatmap(roinames(cols),roinames(rows),mat(rows,cols));
@@ -68,5 +69,36 @@ heat.YLabel     = 'Seeds';
 colormap(gppi)              
 clim([-1 1]*ceil(maxVal))
 
+% Save figure
+saveas(gcf,[wkdir,'tutorial',filesep,'ppi_hi_over_low.png'])
 
+%% Plot ppi_hi_over_low
+% Set-up
+mat             = mats.hi_over_low; % change for different maps
+rows            = unique(sigRows);
+cols            = unique(sigCols);
 
+% Plot all (change mat with filter)
+heat            = heatmap(roinames(cols),roinames(rows),mat(rows,cols));
+heat.XLabel     = 'Targets';
+heat.YLabel     = 'Seeds';
+colormap(gppi)              
+clim([-1 1]*ceil(maxVal))
+
+% Save figure
+saveas(gcf,[wkdir,'tutorial',filesep,'hi_over_low.png'])
+
+%% Plot roi_ev
+% Set-up
+mat             = mats.roi_ev; % change for different maps
+rows            = unique(1:50);
+cols            = unique(1:50);
+
+% Plot all (change mat with filter)
+heat            = heatmap(rows,cols,mat(rows,cols),'CellLabelColor','none');
+heat.XLabel     = 'Targets';
+heat.YLabel     = 'Seeds';
+grid off;
+
+% Save figure
+saveas(gcf,[wkdir,'tutorial',filesep,'roi_ev.png'])
