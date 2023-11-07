@@ -81,8 +81,7 @@ load([wkdir,'tutorial',filesep,'parameters.mat'])
 roi_peak_masks(fstFolder,ntwFolder,roiFolder,roiList,sphere,sphereInfo,contPeak,directionList);
 
 % Extract eigenvariates (might take a little bit)
-%   creates seed-eigenvariate: whitened, filtered, cofounds removed 
-%   creates target-eigenvariate: whitened, frequenz-filtered
+%   creates seed- and target-eigenvariate
 eigenvariate(fstFolder,ntwFolder,contAdj,roiList,roiSubFolder);
 
 % Binds multiple eigenvariate.mat's into a single nifti
