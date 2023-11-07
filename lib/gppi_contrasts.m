@@ -18,46 +18,47 @@ regular PPPI pipeline)
 
 function errorRois      = gppi_contrasts(ntwFolder,roiList,contrasts);
 
-errorRois               = {}
+errorRois       = {}
 
 for r=1:length(roiList)
     
     % Set-up
-    roi                 = roiList{r};            
+    roi             = roiList{r};      
+    roi             = roi(1:end-4);  
     
     try
         load([ntwFolder,'gppi',filesep,'estimates',filesep, ...
             roi,filesep,'SPM.mat']);
 
         %Configure Contrasts
-        ind                 = zeros(length(contrasts),1);
+        ind             = zeros(length(contrasts),1);
         for ii = 1:length(contrasts)
             if mean(contrasts(ii).c==0)~=1 
                 ind(ii)         = 1; 
             end
         end
         
-        contrasts           = contrasts(ind==1);
+        contrasts       = contrasts(ind==1);
         for ii = 1:length(contrasts)
-            xCon(ii)            = spm_FcUtil('Set',contrasts(ii).name,contrasts(ii).stat,'c',contrasts(ii).c,SPM.xX.xKXs);
+            xCon(ii)        = spm_FcUtil('Set',contrasts(ii).name,contrasts(ii).stat,'c',contrasts(ii).c,SPM.xX.xKXs);
         end
         
         %Compute Contrasts
         try
-            init=length(SPM.xCon);
+            init            = length(SPM.xCon);
         catch
-            init=0;
+            init            = 0;
         end
-        if init~=0
+        if init ~= 0
             SPM.xCon(init+1:init+length(xCon)) = xCon;
         else
-            SPM.xCon = xCon;
+            SPM.xCon        = xCon;
         end
-        SPM = spm_contrasts(SPM,init+1:length(SPM.xCon));
+        SPM             = spm_contrasts(SPM,init+1:length(SPM.xCon));
         
     catch
         disp(['Error for ',roi])
-        errorRois = [errorRois,roi];
+        errorRois       = [errorRois,roi];
         
     end
 end
