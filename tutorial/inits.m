@@ -5,7 +5,8 @@
 In this function all need parameters are initialized and shortly explained.
 It runs in the main-script and needs the adapted workind directory as an
 input. The nifti files are also decompressed and first-level activity analysis
-are conducted.
+are conducted. gPPI-Network also assumes middle slice is used as reference 
+slice (alternative script available in PPPI).
 
 Overview of subject-unspecific parameters
 - roiFolder
@@ -114,7 +115,7 @@ matlabbatch{1}.spm.stats.fmri_spec.dir = evGLM.folder;
 matlabbatch{1}.spm.stats.fmri_spec.timing.units = 'secs';
 matlabbatch{1}.spm.stats.fmri_spec.timing.RT = 2;
 matlabbatch{1}.spm.stats.fmri_spec.timing.fmri_t = 40;
-matlabbatch{1}.spm.stats.fmri_spec.timing.fmri_t0 = 1; 
+matlabbatch{1}.spm.stats.fmri_spec.timing.fmri_t0 = 20; 
 matlabbatch{1}.spm.stats.fmri_spec.sess(1).scans = evGLM.prepro(1);
 matlabbatch{1}.spm.stats.fmri_spec.sess(1).multi = evGLM.design(1);
 matlabbatch{1}.spm.stats.fmri_spec.sess(1).multi_reg = evGLM.cofounds(1);
