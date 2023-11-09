@@ -11,7 +11,7 @@ end
 
 %% Brainnettome (all)
 % Load in mats
-mats            = load([wkdir, 'tutorial',filesep,'gppi-matrizes.mat'])
+mats            = load([wkdir, 'tutorial',filesep,'gppi-matrizes.mat']);
 
 % Choose matrix for selecting wanted rows and columns
 mat             = mats.ppi_hi_over_low;
@@ -19,7 +19,7 @@ mat             = mats.ppi_hi_over_low;
 % Load in roi-names
 load([wkdir, 'tutorial',filesep,'templates',filesep,'atlas.mat'])
 roinames        = {atlas.Name};
-roinames        = strrep(roinames,'_','-')
+roinames        = strrep(roinames,'_','-');
 
 %% Create filter index
 % Subset for most significant regions based on row- and colsums (based on PPI.mat)
@@ -66,11 +66,11 @@ cols            = unique(sigCols);
 heat            = heatmap(roinames(cols),roinames(rows),mat(rows,cols));
 heat.XLabel     = 'Targets';
 heat.YLabel     = 'Seeds';
-colormap(gppi)              
-clim([-1 1]*ceil(maxVal))
+colormap(gppi);              
+clim([-1 1]*ceil(maxVal));
 
 % Save figure
-saveas(gcf,[wkdir,'tutorial',filesep,'ppi_hi_over_low.png'])
+saveas(gcf,[wkdir,'tutorial',filesep,'ppi_hi_over_low.png']);
 
 %% Plot ppi_hi_over_low
 % Set-up
@@ -82,11 +82,11 @@ cols            = unique(sigCols);
 heat            = heatmap(roinames(cols),roinames(rows),mat(rows,cols));
 heat.XLabel     = 'Targets';
 heat.YLabel     = 'Seeds';
-colormap(gppi)              
-clim([-1 1]*ceil(maxVal))
+colormap(gppi);             
+clim([-1 1]*ceil(maxVal));
 
 % Save figure
-saveas(gcf,[wkdir,'tutorial',filesep,'hi_over_low.png'])
+saveas(gcf,[wkdir,'tutorial',filesep,'hi_over_low.png']);
 
 %% Plot roi_ev
 % Set-up
@@ -101,4 +101,4 @@ heat.YLabel     = 'Seeds';
 grid off;
 
 % Save figure
-saveas(gcf,[wkdir,'tutorial',filesep,'roi_ev.png'])
+saveas(gcf,[wkdir,'tutorial',filesep,'roi_ev.png']);
