@@ -16,7 +16,7 @@ Overview of subject-unspecific parameters
 - contPeak
 - direktionList
 - contAdj
-- tasks
+- conds
 
 Overview of subject-specific parameters
 - sub
@@ -64,8 +64,8 @@ directionList   = ones(1,246);
     % regressors (6 rigid body regressors)
 contAdj         = 6;
 
-% Task names for which to create gPPI-Parameters
-tasks          = {'1'  'hi'  'low'  'cont'};
+% Condition names for which to create gPPI-Parameters
+conds          = {'hi'  'low'  'cont'};
 
 %% Set up subject-specific parameters
 % Participant

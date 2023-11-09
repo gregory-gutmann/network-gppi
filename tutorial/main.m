@@ -40,7 +40,7 @@ script.
 
 %% Working directory (needs to be updated)
 % Change wd to folder that contains lib- and tutorial-folder
-wkdir           =  '/Users/gregory/Arbeit/gppi-network-main/';
+wkdir           =  'C:\Users\grego\Desktop\gppi-network-main';
 % Adds file separator if necessary
 if wkdir(end) ~= filesep
     wkdir           = [wkdir,filesep];
@@ -95,7 +95,7 @@ eigenvariate_glm(ntwFolder, evGLM);
 %   design variables
 %   deconvoluded seed timeseries
 %   interaction between design variables and seed time series
-gppi_parameter(fstFolder, ntwFolder, tasks);
+gppi_parameter(fstFolder, ntwFolder, conds);
 
 % Apply gppi parameters on target rois to get beta values for each individual
 errorRoisBeta   = gppi_beta(ntwFolder, roiList);
@@ -130,8 +130,6 @@ ppi_hi_over_low = bind_gppi_contrasts(ntwFolder, 'spmT_0003');
 
 % Save gPPI-matrizes
 save([wkdir,'tutorial',filesep,'gppi-matrizes.mat'],'roi_ev','hi_over_low','ppi_hi_over_low')
-heatmap(ppi_hi_over_low)
-
 
 
 
