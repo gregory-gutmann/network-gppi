@@ -136,7 +136,7 @@ websave([preprocFolder,'sub-1304am_preproc2.nii.gz'], ...
     optionTimeout);
 
 %% Decompresses nifti data and run an activity first-level analysis
-glm_fstlevel(wkdir);
+glm_first_level(wkdir);
 
 
 
