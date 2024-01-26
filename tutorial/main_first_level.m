@@ -21,10 +21,9 @@ the Image Processing Toolbox. Before you can run the connectivity analysis,
 you also have to compute conventional activity analysis using SPM, which are 
 implemented in this script.
 
-To shorten the runtime, I changed the number
-of included ROIs to 20. If you want to run the tutorial for the whole
-brain, just change or remove the marked line. My computer needed around 12 
-minutes to compute all connections. 
+To shorten the runtime, I changed the number of included ROIs to 20. 
+If you want to run the tutorial for the whole brain, just change or remove 
+the marked line. My computer needed around 12 minutes to compute all connections. 
 
 Within the folder support_script you can also find the script
 'visualization_gppi_mat.m' with which I visualised the resulting data.
