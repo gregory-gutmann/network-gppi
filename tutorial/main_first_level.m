@@ -176,8 +176,6 @@ N.contPeak          = 'spmT_0004.nii';
 N.directionList     = ones(1,length(N.roiList));
 
 %% Compute gppi-network
-tic
 ngppi(N);
-toc
 
 
