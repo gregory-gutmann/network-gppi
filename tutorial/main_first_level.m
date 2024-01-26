@@ -147,7 +147,8 @@ glm_first_level(wkdir);
 %% Generell parameters
 N.roiFolder         = [wkdir,'tutorial',filesep,'roi_masks',filesep];
 N.roiList           = {dir([N.roiFolder,'*.nii']).name};
-N.roiList           = N.roiList(1:20);  % Remove/change line if you want to include more connections
+N.roiList           = N.roiList(1:20);  % Remove/change line if you want to 
+                            % include a different set of connections
 N.glmFolder         = [wkdir,'tutorial',filesep,'data',filesep,'firstlevel',filesep];
 N.ngppiFolder       = [wkdir,'tutorial',filesep,'gppi-network',filesep];
 N.subjectList       = {'sub-1304am'};    % Can include multiple subjects!
