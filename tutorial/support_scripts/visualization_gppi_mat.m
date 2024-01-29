@@ -69,7 +69,7 @@ colormap(evening);
 clim([-1 1]*ceil(maxVal));
 
 % Save figure
-saveas(gcf,[wkdir,'tutorial',filesep,'gppi-network',filesep,'all_ppi_hi_over_low.png']);
+saveas(gcf,[wkdir,'tutorial',filesep,'gppi-network',filesep,'ppi_hi_over_low.png']);
 
 %% Plot hi_over_low
 % load psy-contrasts
