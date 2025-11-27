@@ -98,7 +98,7 @@ As can be seen in this image, the data is highly complex. To simplify it, I deci
 
 When trying to interpret the data, it might also be very helpful to zoom in on specific nodes that seem to be relevant. The shared script also creates a file for every central node that can be viewed with the BrainNet Viewer. Here are shown all surviving connections of the left dorsal caudate, which was one of the most connected node and is a highly relevant part of the reward network.
 
-Image 3
+XXXImage 3
 
 
 
