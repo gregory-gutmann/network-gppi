@@ -73,8 +73,52 @@ My packet is heavily based on the gPPI-Toolbox by McLaren et al. (2012). Mainly,
 
 
 
-### Literatur
-- Fan, L., Li, H., Zhuo, J., Zhang, Y., Wang, J., Chen, L., ... & Jiang, T. (2016). The human brainnetome atlas: a new brain atlas based on connectional architecture. Cerebral cortex, 26(8), 3508-3526.
-- Masterson, T. D., Kirwan, C. B., Davidson, L. E., & LeCheminant, J. D. (2016). Neural reactivity to visual food stimuli is reduced in some areas of the brain during evening hours compared to morning hours: an fMRI study in women. Brain imaging and behavior, 10(1), 68-78.
-- McLaren, D. G., Ries, M. L., Xu, G., & Johnson, S. C. (2012). A generalized form of context-dependent psychophysiological interactions (gPPI): a comparison to standard approaches. Neuroimage, 61(4), 1277-1286.
+
+# Tutorial B: Second-level analyses
+
+As the second-level analyses of the network-gppi connectivity data can be rather challenging, this tutorial was added to present a potentially pipeline, which can be hopefully used as a stepping stone for new analyses. The approach used here is based on my work in Gutmann et al. (in prep) and uses network-based statistics (NBS) to evaluate effects and focuses on central hubs in its interpretations. Instead of examining singular links, NBS statistically evaluates the size of components i.e., network of regions which are linked by significant connections (p < .001), through permutation testing (for more information, see Zalesky et al., 2010). The simulated data contains two groups with 40 subjects each. They are based on the mean and standard deviation of the depressed group and healthy control group I compared in Gutmann et al. (in prep). In this study, I used data of a Monetary Incentive Delay Task to analyse anhedonia-related network alterations in patients with Major Depressive Disorder. While the tutorial focuses on the group comparison (two-sample t-tests), it also contains further instruction to analyse task effects (one-sample t-tests) as well as correlations with external variables. The simulation process was also restricted so that the generated data did not deviate too much from the original data and the results here are quite reflected of the original difference.
+
+Evaluated using NBS, the group difference is highly significant. The difference might be less distorted by other covariates and therefore unnaturally clear. For the original difference between 99 depressed patients and 28 healthy controls, only a trend was observed. However, the connectivity structure is quite similar. The following image shows all surviving connections visualised with the BrainNet Viewer toolbox (see below for more information about the toolbox). Nodes are color sorted to different networks based on the atlas from Schaefer et al. (2018). 
+
+Image 1
+
+
+
+
+
+As can be seen in this image, the data is highly complex. To simplify it, I decided to focus more on the most central hubs, i.e. nodes who are highly connected within this network. The next image shows only connections between nodes which have 5 or more surviving connections.
+
+Image 2
+
+
+
+
+
+When trying to interpret the data, it might also be very helpful to zoom in on specific nodes that seem to be relevant. The shared script also creates a file for every central node that can be viewed with the BrainNet Viewer. Here are shown all surviving connections of the left dorsal caudate, which was one of the most connected node and is a highly relevant part of the reward network.
+
+Image 3
+
+
+
+
+
+## BrainNet Viewer
+
+To visualise the data with BrainNet Viewer, the [toolbox must be of course downloaded](https://www.nitrc.org/projects/bnv) and its path added in Matlab . To open BrainNet Viewer, type BrainNet into Matlab. Besides the edge-files, which contains information about the relevant connections and are created with the ‘tutorial_scd_level.m’ script, all files you need are within the brainnetview folder (surface, node, options, colormap). 
+
+If you open a new file (File>Load File) you can load in the surface, node, and edge file in the first window. The option file can then be included in the next window. If the colormap is not automatically included, you can load it via Option>Node>Color>More>Load Custom Color. It might be very worthwhile, to alter the options to the particular data. For more information about BrainNet also this manual. [https://www.nitrc.org/docman/view.php/504/77994/BrainNet Viewer Manual 1.61.pdf](https://www.nitrc.org/docman/view.php/504/77994/BrainNet%20Viewer%20Manual%201.61.pdf)
+
+## High Performance Cluster
+
+To avoid daylong run times, I analysed the data for my study using a High Performance Cluster. This is particular suitable when investigating full-brain connectivity in a large number of studies. However, this can be quite tricky – particular in the set-up - and requires some experience. Should you be interest, feel free to contact me at the aforementioned mail-address.
+
+
+## Literatur
+Fan, L., Li, H., Zhuo, J., Zhang, Y., Wang, J., Chen, L., ... & Jiang, T. (2016). The human brainnetome atlas: a new brain atlas based on connectional architecture. Cerebral cortex, 26(8), 3508-3526.
+Gutmann, G., Golde, S., Schwefel, M., Heissel, A., & Heinzel, S. (in prep). Did I win? Assessing anhedonia related whole-brain connectivity changes in depression using the newly developed toolbox network-gppi
+McLaren, D. G., Ries, M. L., Xu, G., & Johnson, S. C. (2012). A generalized form of context-dependent psychophysiological interactions (gPPI): a comparison to standard approaches. Neuroimage, 61(4), 1277-1286.
+Masterson, T. D., Kirwan, C. B., Davidson, L. E., & LeCheminant, J. D. (2016). Neural reactivity to visual food stimuli is reduced in some areas of the brain during evening hours compared to morning hours: an fMRI study in women. Brain imaging and behavior, 10(1), 68-78.
+Schaefer, A., Kong, R., Gordon, E. M., Laumann, T. O., Zuo, X. N., Holmes, A. J., . . . Yeo, B. T. T. (2018). Local-Global Parcellation of the Human Cerebral Cortex from Intrinsic Functional Connectivity MRI. *Cereb Cortex*, *28*(9), 3095-3114.    
+Xia, M., Wang, J., & He, Y. (2013). BrainNet Viewer: a network visualization tool for human brain connectomics. *PloS one*, *8*(7), e68910.
+Zalesky, A., Fornito, A., & Bullmore, E. T. (2010). Network-based statistic: identifying differences in brain networks. *Neuroimage*, *53*(4), 1197-1207.
 
