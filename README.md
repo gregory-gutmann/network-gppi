@@ -80,7 +80,8 @@ As the second-level analyses of the network-gppi connectivity data can be rather
 
 Evaluated using NBS, the group difference is highly significant. The difference might be less distorted by other covariates and therefore unnaturally clear. For the original difference between 99 depressed patients and 28 healthy controls, only a trend was observed. However, the connectivity structure is quite similar. The following image shows all surviving connections visualised with the BrainNet Viewer toolbox (see below for more information about the toolbox). Nodes are color sorted to different networks based on the atlas from Schaefer et al. (2018). 
 
-Image 1
+![all_connections](https://github.com/user-attachments/assets/6558b462-607c-498f-b29d-dd41c960ce09)
+
 
 
 
@@ -88,7 +89,8 @@ Image 1
 
 As can be seen in this image, the data is highly complex. To simplify it, I decided to focus more on the most central hubs, i.e. nodes who are highly connected within this network. The next image shows only connections between nodes which have 5 or more surviving connections.
 
-Image 2
+![central_hubs](https://github.com/user-attachments/assets/106298ad-9ac7-4fb6-b984-a3e6599f2fd8)
+
 
 
 
