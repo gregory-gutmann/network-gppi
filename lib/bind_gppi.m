@@ -4,7 +4,7 @@
 function bind_gppi(conFolder,subjectList,contrastsInfo)
 
 % Get SPM contrasts
-spmDirs         = dir([conFolder '**\spm*.nii']);
+spmDirs         = dir([conFolder,'**',filesep,'spm*.nii']);
 contrasts       = {spmDirs.name};
 contrasts       = sort(unique(contrasts));
 
