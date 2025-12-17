@@ -109,7 +109,7 @@ When trying to interpret the data, it might also be very helpful to zoom in on s
 
 To visualise the data with BrainNet Viewer, the [toolbox must be of course downloaded](https://www.nitrc.org/projects/bnv) and its path added in Matlab . To open BrainNet Viewer, type BrainNet into Matlab. Besides the edge-files, which contain information about the relevant connections and are created with the ‘tutorial_scd_level.m’ script, all files you need are within the brainnetview folder (surface, node, options, colormap). 
 
-If you open a new file (File>Load File), you can load in the surface, node, and edge file in the first window. The option file can then be included in the next window. If the colormap is not automatically included, you can load it via Option>Node>Color>More>Load Custom Color. It might be very worthwhile to alter the options to the particular data. For more information about BrainNet, you can also refer also to this manual. [https://www.nitrc.org/docman/view.php/504/77994/BrainNet Viewer Manual 1.61.pdf](https://www.nitrc.org/docman/view.php/504/77994/BrainNet%20Viewer%20Manual%201.61.pdf)
+If you open a new file (File>Load File), you can load in the surface, node, and edge file in the first window. The option file can then be included in the next window. If the colormap is not automatically included, you can load it via Option>Node>Color>More>Load Custom Color. It might be very worthwhile to alter the options to the particular data. For more information about BrainNet, you can also refer also [to this manual.](https://www.nitrc.org/docman/view.php/504/77994/BrainNet%20Viewer%20Manual%201.61.pdf)
 
 ## High Performance Cluster
 
