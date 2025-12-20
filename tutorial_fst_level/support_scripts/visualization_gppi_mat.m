@@ -14,12 +14,12 @@ end
 
 %% Brainnettome (all)
 % Load ppi-constrast
-load([wkdir, 'tutorial',filesep,'gppi-network',filesep, ...
+load([wkdir, 'tutorial_fst_level',filesep,'gppi-network',filesep, ...
     'ngppi_mat_ppi-hi_over_low.mat']);
 mat_ppi         = genConMat;
 
 % Load in roi-names
-load([wkdir, 'tutorial',filesep,'templates',filesep,'atlas.mat'])
+load([wkdir, 'tutorial_fst_level',filesep,'templates',filesep,'atlas.mat'])
 roinames        = {atlas.Name};
 roinames        = strrep(roinames,'_','-');
 %roinames        = roinames(1:20); % Adapt to rois used
@@ -69,11 +69,11 @@ colormap(evening);
 clim([-1 1]*ceil(maxVal));
 
 % Save figure
-saveas(gcf,[wkdir,'tutorial',filesep,'gppi-network',filesep,'ppi_hi_over_low.png']);
+saveas(gcf,[wkdir,'tutorial_fst_level',filesep,'gppi-network',filesep,'ppi_hi_over_low.png']);
 
 %% Plot hi_over_low
 % load psy-contrasts
-load([wkdir, 'tutorial',filesep,'gppi-network',filesep, ...
+load([wkdir, 'tutorial_fst_level',filesep,'gppi-network',filesep, ...
     'ngppi_mat_hi_over_low.mat']);
 mat_psy         = genConMat;
 rows            = unique(sigRows);
@@ -87,11 +87,11 @@ colormap(evening);
 clim([-1 1]*ceil(maxVal));
 
 % Save figure
-saveas(gcf,[wkdir,'tutorial',filesep,'gppi-network',filesep,'hi_over_low.png']);
+saveas(gcf,[wkdir,'tutorial_fst_level',filesep,'gppi-network',filesep,'hi_over_low.png']);
 
 %% Plot roi_ev
 % load seed-contrast
-load([wkdir, 'tutorial',filesep,'gppi-network',filesep, ...
+load([wkdir, 'tutorial_fst_level',filesep,'gppi-network',filesep, ...
     'ngppi_mat_roi_ev.mat']);
 mat_roi         = genConMat;
 rows            = unique(1:50);
@@ -104,4 +104,4 @@ heat.YLabel     = 'Seeds';
 grid off;
 
 % Save figure
-saveas(gcf,[wkdir,'tutorial',filesep,'gppi-network',filesep,'roi_ev.png']);
+saveas(gcf,[wkdir,'tutorial_fst_level',filesep,'gppi-network',filesep,'roi_ev.png']);
